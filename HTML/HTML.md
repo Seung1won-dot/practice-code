@@ -97,6 +97,18 @@ HTML은 하이퍼텍스트 마크업 언어(HyperText Markup Language)의 약자
 4. 성능 최적화
 5. 프레임워크와의 통합
 
+## 예제 파일 구조
+
+### HTML 기초
+- **기초/**: `00_setup_intro.md`, `01_document_structure.html`, `02_headings.html`
+- **기본태그/**: `03_paragraphs_links.html`
+- **리스트와미디어/**: `04_lists.html`, `05_images_tables.html`
+
+### HTML 심화
+- **폼과시맨틱/**: `06_forms.html`, `07_semantic_tags.html`
+- **메타와접근성/**: `08_meta_seo.html`, `09_accessibility.html`
+- **html5고급/**: `10_html5_api.html`, `11_template_slot.html`, `12_microdata.html`
+
 ## HTML 개발 도구
 
 ### 텍스트 에디터

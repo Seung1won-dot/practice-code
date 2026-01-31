@@ -1,0 +1,43 @@
+/*
+  트랜지션과 애니메이션
+*/
+
+/* transition: 속성 변화에 부드러운 전환 */
+.transition-box {
+  background: blue;
+  transition: background 0.3s ease;
+  transition: all 0.3s ease-in-out;
+}
+
+.transition-box:hover {
+  background: red;
+}
+
+/* 여러 속성 개별 지정 */
+.multi-transition {
+  transition-property: transform, opacity;
+  transition-duration: 0.3s, 0.5s;
+  transition-timing-function: ease, linear;
+  transition-delay: 0s, 0.2s;
+}
+
+/* animation: 키프레임 기반 애니메이션 */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  0% { transform: translateY(100%); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+.animate-box {
+  animation: fadeIn 1s ease forwards;
+  animation-name: slideUp;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0.2s;
+  animation-iteration-count: infinite;  /* 1, infinite */
+  animation-direction: alternate;       /* normal, reverse, alternate */
+}

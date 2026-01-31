@@ -1,0 +1,39 @@
+/*
+  Flexbox - 1차원 레이아웃
+*/
+
+.flex-container {
+  display: flex;
+  
+  /* 메인 축 방향 */
+  flex-direction: row;   /* row | row-reverse | column | column-reverse */
+  
+  /* 줄바꿈 */
+  flex-wrap: nowrap;     /* nowrap | wrap | wrap-reverse */
+  
+  /* flex-direction + flex-wrap 약어 */
+  flex-flow: row wrap;
+  
+  /* 메인 축 정렬 */
+  justify-content: flex-start;  /* flex-start | flex-end | center | space-between | space-around | space-evenly */
+  
+  /* 교차 축 정렬 */
+  align-items: stretch;  /* stretch | flex-start | flex-end | center | baseline */
+  
+  /* 여러 줄일 때 교차 축 정렬 */
+  align-content: flex-start;
+  
+  /* 간격 */
+  gap: 10px;
+}
+
+.flex-item {
+  /* 늘어나고 줄어드는 비율 */
+  flex: 1;              /* flex-grow flex-shrink flex-basis 약어 */
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  
+  /* 개별 정렬 */
+  align-self: auto;
+}

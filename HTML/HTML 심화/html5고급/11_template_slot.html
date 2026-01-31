@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>템플릿과 슬롯</title>
+</head>
+<body>
+    <h1>template과 slot</h1>
+    <p>template은 렌더링되지 않는 콘텐츠 템플릿입니다. JavaScript로 활성화할 때까지 비활성 상태로 유지됩니다.</p>
+    
+    <!-- template: 파싱되지만 렌더링되지 않음. JavaScript에서 content를 복제하여 사용 -->
+    <template id="cardTemplate">
+        <div class="card">
+            <h3 class="card-title"></h3>
+            <p class="card-desc"></p>
+        </div>
+    </template>
+    
+    <div id="cardContainer"></div>
+    
+    <script>
+        const template = document.getElementById('cardTemplate');
+        const container = document.getElementById('cardContainer');
+        
+        const items = [
+            { title: '카드 1', desc: '첫 번째 카드 설명' },
+            { title: '카드 2', desc: '두 번째 카드 설명' }
+        ];
+        
+        items.forEach(item => {
+            const clone = template.content.cloneNode(true);
+            clone.querySelector('.card-title').textContent = item.title;
+            clone.querySelector('.card-desc').textContent = item.desc;
+            container.appendChild(clone);
+        });
+    </script>
+    
+    <hr>
+    
+    <h2>slot (Web Components)</h2>
+    <p>Custom Element와 Shadow DOM에서 slot은 자식 콘텐츠를 삽입하는 플레이스홀더입니다.</p>
+    <pre>
+// 사용 예 (Custom Element 정의 시)
+class MyCard extends HTMLElement {
+    connectedCallback() {
+        this.attachShadow({mode: 'open'}).innerHTML = `
+            &lt;div class="card"&gt;
+                &lt;h3&gt;&lt;slot name="title"&gt;&lt;/slot&gt;&lt;/h3&gt;
+                &lt;p&gt;&lt;slot&gt;기본 내용&lt;/slot&gt;&lt;/p&gt;
+            &lt;/div&gt;
+        `;
+    }
+}
+// &lt;my-card&gt;&lt;span slot="title"&gt;제목&lt;/span&gt;본문&lt;/my-card&gt;
+    </pre>
+</body>
+</html>

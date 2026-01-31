@@ -1,0 +1,36 @@
+/*
+  CSS 변수 (Custom Properties)
+*/
+
+:root {
+  /* 변수 정의 */
+  --primary-color: #3498db;
+  --secondary-color: #2ecc71;
+  --font-main: "Malgun Gothic", sans-serif;
+  --spacing-unit: 8px;
+  --border-radius: 4px;
+}
+
+.card {
+  /* 변수 사용 */
+  background: var(--primary-color);
+  font-family: var(--font-main);
+  padding: calc(var(--spacing-unit) * 2);
+  border-radius: var(--border-radius);
+}
+
+/* 기본값 지정 */
+.element {
+  color: var(--text-color, #333);
+}
+
+/* 다크 테마 예시 */
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #fff;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+}

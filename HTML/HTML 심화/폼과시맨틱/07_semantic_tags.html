@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>시맨틱 태그</title>
+</head>
+<body>
+    <!-- header: 사이트/섹션의 머리글 (로고, 네비게이션 등) -->
+    <header>
+        <h1>사이트 제목</h1>
+        <p>시맨틱 태그는 콘텐츠의 의미를 브라우저와 스크린리더에 전달합니다.</p>
+        <nav aria-label="메인 메뉴">
+            <ul>
+                <li><a href="#">홈</a></li>
+                <li><a href="#">소개</a></li>
+                <li><a href="#">서비스</a></li>
+                <li><a href="#">연락처</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- main: 문서의 핵심 콘텐츠 (페이지당 하나) -->
+    <main>
+        <!-- article: 독립적으로 배포 가능한 콘텐츠 (블로그 글, 뉴스 기사 등) -->
+        <article>
+            <header>
+                <h2>시맨틱 HTML의 장점</h2>
+                <time datetime="2025-01-31">2025-01-31</time>
+                <address>작성자: 개발자</address>
+            </header>
+            
+            <!-- section: 주제별로 구분된 콘텐츠 블록 -->
+            <section>
+                <h3>1. SEO 개선</h3>
+                <p>검색 엔진이 콘텐츠 구조를 파악하기 쉽습니다. header, nav, main, article 등이 문서 구조를 명확히 합니다.</p>
+            </section>
+            <section>
+                <h3>2. 접근성 향상</h3>
+                <p>스크린 리더가 section, article, nav 등을 구분하여 사용자에게 더 나은 경험을 제공합니다.</p>
+            </section>
+            <section>
+                <h3>3. 유지보수 용이</h3>
+                <p>의미 있는 태그명으로 코드 가독성이 높아집니다. div 대신 적절한 시맨틱 태그를 사용하세요.</p>
+            </section>
+            
+            <footer>
+                <p>태그: HTML, 시맨틱, 웹표준</p>
+            </footer>
+        </article>
+        
+        <!-- aside: 본문과 간접적으로 연관된 보조 콘텐츠 (사이드바, 광고 등) -->
+        <aside>
+            <h3>관련 글</h3>
+            <ul>
+                <li><a href="#">HTML5 기본 문법</a></li>
+                <li><a href="#">ARIA 속성 가이드</a></li>
+            </ul>
+            <h3>광고</h3>
+            <p>광고 영역입니다.</p>
+        </aside>
+    </main>
+    
+    <!-- footer: 사이트/섹션의 푸터 (저작권, 연락처 등) -->
+    <footer>
+        <p>&copy; 2025 예제 사이트. All rights reserved.</p>
+        <address>문의: example@email.com</address>
+    </footer>
+</body>
+</html>

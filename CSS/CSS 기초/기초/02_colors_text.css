@@ -1,0 +1,41 @@
+/*
+  색상과 텍스트 스타일
+*/
+
+/* 색상 지정 방법 */
+.color-hex {
+  color: #ff0000;        /* 빨강 (HEX) */
+  background: #333;      /* 짧게: #333 = #333333 */
+}
+
+.color-rgb {
+  color: rgb(255, 0, 0);
+  color: rgba(255, 0, 0, 0.5);  /* 투명도 포함 */
+}
+
+.color-name {
+  color: red;
+  color: dodgerblue;
+}
+
+/* 폰트 */
+.font-basic {
+  font-family: "Malgun Gothic", sans-serif;
+  font-size: 16px;
+  font-weight: normal;   /* 100~900, bold */
+  font-style: italic;    /* normal, italic */
+}
+
+/* 텍스트 정렬 */
+.text-align {
+  text-align: left;      /* left, center, right, justify */
+  text-decoration: none; /* none, underline, line-through */
+  text-transform: uppercase;  /* none, uppercase, lowercase, capitalize */
+  letter-spacing: 1px;
+  line-height: 1.5;
+}
+
+/* 텍스트 그림자 */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}

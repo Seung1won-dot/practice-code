@@ -1,0 +1,47 @@
+/*
+  CSS 기본 문법과 선택자
+  
+  선택자 {
+    속성: 값;
+  }
+*/
+
+/* 요소 선택자 */
+p {
+  font-size: 16px;
+}
+
+h1 {
+  color: #333;
+}
+
+/* 클래스 선택자 (.) */
+.my-class {
+  color: blue;
+}
+
+/* ID 선택자 (#) - 페이지당 하나 권장 */
+#my-id {
+  font-weight: bold;
+}
+
+/* 복합 선택자 */
+/* 자손 선택자 (공백) */
+div p {
+  margin: 10px;
+}
+
+/* 자식 선택자 (>) */
+ul > li {
+  list-style: none;
+}
+
+/* 인접 형제 선택자 (+) */
+h2 + p {
+  margin-top: 0;
+}
+
+/* 그룹 선택자 (,) */
+h1, h2, h3 {
+  font-family: sans-serif;
+}

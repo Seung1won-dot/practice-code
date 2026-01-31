@@ -105,6 +105,19 @@ JavaScript는 1995년 넷스케이프(Netscape)의 브렌던 아이크(Brendan E
 4. 테스팅
 5. 프레임워크/라이브러리 (React, Vue 등)
 
+## 예제 파일 구조
+
+### JavaScript 기초
+- **기초/**: `00_setup_intro.md`, `01_variables_types.js`, `02_operators_condition.js`, `03_loops.js`
+- **함수/**: `04_functions.js`
+- **객체와배열/**: `05_objects.js`, `06_arrays.js`
+- **DOM/**: `07_dom_basic.js`
+
+### JavaScript 심화
+- **이벤트/**: `08_events.js`
+- **비동기/**: `09_promise_async.js`
+- **고급/**: `10_closure_scope.js`, `11_classes.js`, `12_modules.js`
+
 ## JavaScript 개발 환경
 
 ### 런타임

@@ -1,0 +1,56 @@
+/*
+  display와 position
+*/
+
+/* display: 요소 표시 방식 */
+.block {
+  display: block;   /* div, p 등 - 줄 전체 차지 */
+}
+
+.inline {
+  display: inline;  /* span, a 등 - 내용만큼만 */
+}
+
+.inline-block {
+  display: inline-block;  /* inline이지만 width/height 적용 가능 */
+}
+
+.flex {
+  display: flex;
+}
+
+.none {
+  display: none;    /* 숨김 (공간도 없음) */
+}
+
+.hidden {
+  visibility: hidden;  /* 숨기지만 공간은 유지 */
+}
+
+/* position */
+.static {
+  position: static;  /* 기본값, 흐름 그대로 */
+}
+
+.relative {
+  position: relative;  /* 원래 위치 기준, top/left 등으로 이동 */
+  top: 10px;
+  left: 20px;
+}
+
+.absolute {
+  position: absolute;  /* 가장 가까운 positioned 부모 기준 */
+  top: 0;
+  right: 0;
+}
+
+.fixed {
+  position: fixed;  /* 뷰포트 기준, 스크롤해도 고정 */
+  bottom: 20px;
+  right: 20px;
+}
+
+.sticky {
+  position: sticky;  /* 스크롤 시 특정 위치에서 고정 */
+  top: 0;
+}

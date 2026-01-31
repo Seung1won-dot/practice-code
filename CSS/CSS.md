@@ -99,6 +99,18 @@ CSS는 캐스케이딩 스타일 시트(Cascading Style Sheets)의 약자로, �
 4. 전처리기 (Sass, Less)
 5. 성능 최적화
 
+## 예제 파일 구조
+
+### CSS 기초
+- **기초/**: `00_setup_intro.md`, `01_syntax_selectors.css`, `02_colors_text.css`
+- **박스모델/**: `03_box_model.css`, `04_display_position.css`
+
+### CSS 심화
+- **FlexboxGrid/**: `06_flexbox.css`, `07_grid.css`
+- **반응형/**: `08_media_queries.css`
+- **애니메이션/**: `09_transition_animation.css`
+- **고급/**: `10_css_variables.css`, `11_pseudo_selectors.css`
+
 ## CSS 개발 도구
 
 ### 전처리기

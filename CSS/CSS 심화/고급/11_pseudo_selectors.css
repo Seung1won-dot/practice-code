@@ -1,0 +1,39 @@
+/*
+  의사 클래스와 의사 요소
+*/
+
+/* 의사 클래스 - 상태 */
+a:hover { color: red; }
+a:active { color: blue; }
+a:visited { color: purple; }
+a:focus { outline: 2px solid blue; }
+
+input:focus { border-color: blue; }
+input:disabled { opacity: 0.5; }
+
+/* 첫 번째/마지막 자식 */
+li:first-child { font-weight: bold; }
+li:last-child { border-bottom: none; }
+li:nth-child(2) { color: blue; }
+li:nth-child(odd) { background: #f5f5f5; }
+li:nth-child(2n) { background: #eee; }
+
+/* 의사 요소 */
+p::before {
+  content: "→ ";
+  color: gray;
+}
+
+p::after {
+  content: " ←";
+}
+
+/* 첫 글자/첫 줄 */
+p::first-letter { font-size: 2em; }
+p::first-line { font-weight: bold; }
+
+/* 선택 영역 */
+::selection {
+  background: yellow;
+  color: black;
+}

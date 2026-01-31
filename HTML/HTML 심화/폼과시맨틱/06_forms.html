@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>폼 요소 (Form)</title>
+</head>
+<body>
+    <h1>폼 요소 (Form)</h1>
+    
+    <form action="/submit" method="post">
+        <!-- 텍스트 입력 -->
+        <fieldset>
+            <legend>기본 정보</legend>
+            <label for="username">이름:</label>
+            <input type="text" id="username" name="username" required 
+                   placeholder="이름을 입력하세요" maxlength="20"><br><br>
+            
+            <label for="email">이메일:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="password">비밀번호:</label>
+            <input type="password" id="password" name="password" 
+                   minlength="8" placeholder="8자 이상"><br><br>
+        </fieldset>
+        
+        <!-- 라디오, 체크박스 -->
+        <fieldset>
+            <legend>선택 항목</legend>
+            <label>성별:</label>
+            <input type="radio" name="gender" value="male" id="male">
+            <label for="male">남</label>
+            <input type="radio" name="gender" value="female" id="female">
+            <label for="female">여</label><br><br>
+            
+            <label>관심사 (복수 선택):</label><br>
+            <input type="checkbox" name="interest" value="web" id="web">
+            <label for="web">웹개발</label>
+            <input type="checkbox" name="interest" value="design" id="design">
+            <label for="design">디자인</label>
+            <input type="checkbox" name="interest" value="mobile" id="mobile">
+            <label for="mobile">모바일</label><br><br>
+        </fieldset>
+        
+        <!-- 셀렉트, 데이터리스트 -->
+        <fieldset>
+            <legend>추가 입력</legend>
+            <label for="country">국가:</label>
+            <select id="country" name="country">
+                <optgroup label="아시아">
+                    <option value="kr">한국</option>
+                    <option value="jp">일본</option>
+                    <option value="cn">중국</option>
+                </optgroup>
+                <optgroup label="북미">
+                    <option value="us">미국</option>
+                    <option value="ca">캐나다</option>
+                </optgroup>
+            </select><br><br>
+            
+            <label for="birth">생년월일:</label>
+            <input type="date" id="birth" name="birth"><br><br>
+            
+            <label for="volume">만족도 (0-100):</label>
+            <input type="range" id="volume" name="volume" min="0" max="100" value="50">
+            <output for="volume" id="volOutput">50</output><br><br>
+            
+            <label for="message">메시지:</label><br>
+            <textarea id="message" name="message" rows="4" cols="40" 
+                      placeholder="남기고 싶은 말을 입력하세요"></textarea><br><br>
+        </fieldset>
+        
+        <button type="submit">제출</button>
+        <button type="reset">초기화</button>
+    </form>
+</body>
+</html>
